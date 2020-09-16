@@ -1,0 +1,501 @@
+﻿year,title,Actual,womenonly,menonly,genderweighted
+1994,The Shawshank Redemption,1,1,1,1
+1972,The Godfather,2,10,2,2
+2008,The Dark Knight,4,3,3,3
+2003,The Lord of the Rings: The Return of the King,8,2,4,4
+1993,Schindler’s List,6,6,11,5
+1999,Fight Club,10,5,8,6
+2001,The Lord of the Rings: The Fellowship of the Ring,11,7,10,7
+1957,12 Angry Men,5,27,7,8
+1974,The Godfather: Part II,3,22,5,9
+2010,Inception,14,8,6,10
+1994,Forrest Gump,12,9,13,11
+2002,The Lord of the Rings: The Two Towers,15,11,14,12
+1994,The Lion King,47,4,29,13
+1994,Pulp Fiction,7,15,9,14
+2014,Interstellar,30,25,15,15
+1999,The Green Mile,32,12,28,16
+1975,One Flew Over the Cuckoo’s Nest,16,24,19,17
+1966,"The Good, the Bad and the Ugly",9,115,12,18
+2006,The Prestige,48,26,16,19
+1998,American History X,31,17,27,20
+2012,The Dark Knight Rises,65,23,22,21
+1997,Life Is Beautiful,25,16,41,22
+1980,Star Wars: Episode V – The Empire Strikes Back,13,41,17,23
+1994,Leon: The Professional,27,21,37,24
+2002,City of God,21,64,20,25
+1995,Se7en,22,28,23,26
+2001,Spirited Away,28,13,56,27
+1991,The Silence of the Lambs,23,20,33,28
+2006,The Departed,40,35,26,29
+1990,Goodfellas,17,71,18,30
+2011,The Intouchables,37,19,52,31
+2014,Whiplash,45,54,30,32
+2000,Gladiator,46,44,24,33
+2012,Django Unchained,60,29,31,34
+2002,The Pianist,39,31,53,35
+1946,It’s a Wonderful Life,24,56,51,36
+1960,Psycho,34,55,40,37
+1977,Star Wars: Episode IV – A New Hope,20,48,32,38
+2009,Inglourious Basterds,97,32,43,39
+1998,Saving Private Ryan,29,70,25,40
+1995,The Usual Suspects,26,58,36,41
+1999,The Matrix,18,62,21,42
+2000,Memento,49,57,34,43
+1942,Casablanca,36,73,42,44
+1999,American Beauty,63,51,35,45
+1985,Back to the Future,44,49,46,46
+2001,A Beautiful Mind,144,34,68,47
+1954,Rear Window,43,80,60,48
+2000,Requiem for a Dream,80,50,49,49
+2011,Harry Potter and the Deathly Hallows: Part 2,218,14,126,50
+2006,The Lives of Others,58,86,78,51
+2010,Shutter Island,177,39,59,52
+2008,WALL-E,62,42,62,53
+2004,Eternal Sunshine of the Spotless Mind,87,38,66,54
+1980,The Shining,61,61,47,55
+1997,Good Will Hunting,102,60,48,56
+1971,A Clockwork Orange,84,79,50,57
+2001,Amelie,82,30,90,58
+1954,Seven Samurai,19,336,39,59
+1983,Star Wars: Episode VI – Return of the Jedi,76,87,63,60
+1992,Reservoir Dogs,77,94,64,61
+2017,Coco,51,209,166,62
+1988,Cinema Paradiso,54,165,97,63
+1979,Apocalypse Now,50,219,38,64
+1940,The Great Dictator,53,262,101,65
+1950,Sunset Boulevard,55,190,108,66
+1931,City Lights,35,294,92,67
+1997,Princess Mononoke,64,118,100,68
+2015,Room,143,82,139,69
+2003,Pirates of the Caribbean: The Curse of the Black Pearl,> 250,36,113,70
+2004,Howl’s Moving Castle,137,43,216,71
+1962,To Kill a Mockingbird,89,102,135,72
+2009,Up,115,37,117,73
+2014,Gone Girl,179,81,70,74
+2010,Toy Story 3,98,66,82,75
+1936,Modern Times,38,248,96,76
+1988,Grave of the Fireflies,57,159,133,77
+2006,Pan’s Labyrinth,130,74,91,78
+2016,Hacksaw Ridge,175,161,124,79
+1968,2001: A Space Odyssey,91,195,54,80
+2007,Into the Wild,181,84,95,81
+1958,Vertigo,72,154,87,82
+2015,Inside Out,140,78,107,83
+2005,Batman Begins,116,106,58,84
+1975,Monty Python and the Holy Grail,103,123,104,85
+2009,3 Idiots,93,203,93,86
+2003,Oldeuboi,67,171,73,87
+1964,Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb,56,236,57,88
+1991,Terminator 2,42,178,44,89
+1959,North by Northwest,74,205,99,90
+1968,Once Upon a Time in the West,33,447,55,91
+1981,Raiders of the Lost Ark,41,131,65,92
+1995,Toy Story,94,85,80,93
+1952,Singin’ in the Rain,90,110,170,94
+2016,La La Land,207,122,86,95
+1979,Alien,52,151,67,96
+1941,Citizen Kane,71,188,74,97
+2002,Catch Me if You Can,219,97,81,98
+1983,Scarface,105,181,69,99
+1976,Taxi Driver,88,164,71,100
+2014,The Grand Budapest Hotel,194,65,128,101
+1987,Full Metal Jacket,92,177,83,102
+2010,How to Train Your Dragon,176,47,165,103
+1984,Amadeus,83,128,121,104
+2007,There Will Be Blood,165,212,72,105
+2012,The Avengers,> 250,52,144,106
+1984,Once Upon a Time in America,69,337,88,107
+2013,The Wolf of Wall Street,150,158,45,108
+2005,V for Vendetta,151,76,112,109
+1939,Gone With the Wind,157,46,279,110
+2003,Kill Bill: Vol. 1,174,89,114,111
+1995,Braveheart,75,141,61,112
+2003,Finding Nemo,166,53,151,113
+1999,The Sixth Sense,160,75,116,114
+2011,The Help,241,33,245,115
+2015,Star Wars: The Force Awakens,> 250,92,154,116
+2015,Mad Max: Fury Road,204,135,79,117
+2000,Snatch,100,144,76,118
+2016,Dangal,73,649,195,119
+2016,Zootopia,> 250,95,187,120
+2001,Donnie Darko,226,91,122,121
+2008,Gran Torino,158,121,120,122
+1989,Indiana Jones and the Last Crusade,112,156,84,123
+2012,Jagten,101,183,141,124
+1988,My Neighbor Totoro,132,112,183,125
+1996,Trainspotting,156,107,127,126
+2013,12 Years a Slave,201,100,131,127
+1959,Some Like It Hot,118,124,186,128
+1973,The Sting,95,284,143,129
+2013,Prisoners,215,148,98,130
+2017,Logan,202,193,103,131
+2016,Your Name,79,399,190,132
+2007,Taare Zameen Par,81,448,138,133
+2011,A Separation,109,242,125,134
+1997,Titanic,> 250,45,188,135
+2011,Warrior,154,213,134,136
+2017,Dunkirk,236,192,145,137
+2015,Spotlight,205,155,152,138
+1986,Stand by Me,192,125,184,139
+2014,X-Men: Days of Future Past,> 250,113,159,140
+2004,Kill Bill: Vol. 2,> 250,116,157,141
+2014,The Imitation Game,> 250,69,209,142
+2010,The King’s Speech,> 250,59,206,143
+1986,Aliens,68,217,85,144
+2004,Downfall,121,288,115,145
+1998,"Lock, Stock and Two Smoking Barrels",142,199,130,146
+1997,L.A. Confidential,106,225,94,147
+2016,Arrival,> 250,169,137,148
+1957,Paths of Glory,59,704,109,149
+2017,Blade Runner 2049,147,368,102,150
+1991,Beauty and the Beast,247,40,379,151
+2014,Guardians of the Galaxy,> 250,111,147,152
+1962,Lawrence of Arabia,85,396,105,153
+1993,Jurassic Park,198,150,118,154
+1927,Metropolis,108,331,182,155
+2016,Deadpool,> 250,126,155,156
+2012,The Hobbit: An Unexpected Journey,> 250,90,192,157
+2001,"Monsters, Inc.",224,77,196,158
+1988,Die Hard,122,220,77,159
+1989,Dead Poets Society,238,103,239,160
+2010,Black Swan,> 250,98,161,161
+2015,The Martian,> 250,134,160,162
+1957,Witness for the Prosecution,66,476,229,163
+2004,Hotel Rwanda,190,176,181,164
+2009,Star Trek,> 250,117,199,165
+2013,The Hobbit: The Desolation of Smaug,> 250,109,205,166
+2009,Hachi: A Dog’s Tale,212,127,288,167
+2017,"Three Billboards Outside Ebbing, Missouri",111,351,204,168
+1981,Das Boot,70,603,111,169
+1995,Heat,123,332,89,170
+1978,The Deer Hunter,159,346,153,171
+1980,The Elephant Man,148,261,177,172
+1931,M,78,465,167,173
+1950,All About Eve,114,227,302,174
+1921,The Kid,99,459,249,175
+1944,Double Indemnity,86,433,169,176
+2013,Her,> 250,194,106,177
+2009,Mary and Max,178,175,274,178
+2017,Thor: Ragnarok,> 250,200,260,179
+2013,Dallas Buyers Club,> 250,146,175,180
+1960,The Apartment,107,322,189,181
+2008,In Bruges,> 250,239,140,182
+1998,The Truman Show,206,132,149,183
+2010,Incendies,131,300,253,184
+1939,The Wizard of Oz,232,119,241,185
+2008,Slumdog Millionaire,> 250,99,191,186
+2007,No Country for Old Men,162,244,75,187
+1999,The Boondock Saints,> 250,254,250,188
+2009,The Secret in Their Eyes,135,265,198,189
+2016,Lion,> 250,170,332,190
+2017,Baahubali 2: The Conclusion,> 250,1170,343,191
+2015,The Revenant,> 250,214,129,192
+2004,Million Dollar Baby,203,163,162,193
+2005,Babam ve Oglum,117,526,291,194
+1963,The Great Escape,126,479,174,195
+1948,Bicycle Thieves,96,458,202,196
+2004,Harry Potter and the Prisoner of Azkaban,> 250,72,339,197
+2006,Blood Diamond,> 250,172,212,198
+1993,The Nightmare Before Christmas,> 250,105,318,199
+1974,Chinatown,129,360,158,200
+2012,The Perks of Being a Wallflower,> 250,108,232,201
+1990,Edward Scissorhands,> 250,67,357,202
+1949,The Third Man,127,484,224,203
+2003,Big Fish,> 250,133,226,204
+2013,Rush,193,252,172,205
+1954,Dial M for Murder,155,352,233,206
+1995,Before Sunrise,211,179,228,207
+1940,Rebecca,173,250,350,208
+1992,Unforgiven,120,543,110,209
+1979,Life of Brian,183,266,179,210
+1998,The Big Lebowski,167,256,123,211
+1992,Aladdin,> 250,120,308,212
+2000,Amores Perros,209,260,225,213
+2007,The Bourne Ultimatum,234,235,156,214
+2007,Ratatouille,> 250,138,211,215
+1996,Fargo,161,230,164,216
+1995,Twelve Monkeys,245,238,163,217
+1965,For a Few Dollars More,104,792,142,218
+1980,Raging Bull,124,599,119,219
+2005,Serenity,> 250,208,295,220
+1967,Cool Hand Luke,172,539,215,221
+1969,Butch Cassidy and the Sundance Kid,210,421,231,222
+1957,The Bridge on the River Kwai,138,581,180,223
+1988,Rain Man,> 250,182,217,224
+1965,The Sound of Music,> 250,101,516,225
+1957,The Seventh Seal,141,462,223,226
+1993,In the Name of the Father,188,408,268,227
+2014,Wild Tales,185,323,282,228
+1939,Mr. Smith Goes to Washington,145,466,297,229
+2006,The Pursuit of Happyness,> 250,185,220,230
+1995,Casino,146,419,136,231
+1987,The Princess Bride,214,136,298,232
+1950,Rashomon,110,626,185,233
+2008,Iron Man,> 250,140,244,234
+1975,Dog Day Afternoon,> 250,417,252,235
+2014,PK,> 250,646,246,236
+2005,Sin City,> 250,231,148,237
+1954,On the Waterfront,139,546,237,238
+1982,Gandhi,227,370,221,239
+2017,Call Me by Your Name,186,347,528,240
+2011,X: First Class,> 250,157,248,241
+1948,The Treasure of the Sierra Madre,119,786,230,242
+2014,Kingsman: The Secret Service,> 250,174,259,243
+2012,Life of Pi,> 250,152,257,244
+2016,Captain America: Civil War,> 250,215,265,245
+2005,Harry Potter and the Goblet of Fire,> 250,96,431,246
+2004,The Notebook,> 250,63,452,247
+1976,Rocky,220,442,132,248
+2013,About Time,> 250,189,269,249
+1977,Annie Hall,233,289,218,250
+2003,Mystic River,> 250,245,219,251
+2011,The Girl With the Dragon Tattoo,> 250,216,222,252
+1992,Scent of a Woman,> 250,276,255,253
+2007,Atonement,> 250,139,366,254
+2011,The Artist,> 250,197,325,255
+2014,Big Hero 6,> 250,129,462,256
+1986,Platoon,187,490,176,257
+1984,Nausicaa of the Valley of the Wind,213,378,301,258
+1973,The Exorcist,> 250,309,178,259
+1925,The Gold Rush,136,684,306,260
+1953,Roman Holiday,> 250,206,426,261
+1982,The Thing,163,528,146,262
+1984,The Terminator,229,318,150,263
+1985,The Breakfast Club,> 250,137,391,264
+2007,Persepolis,> 250,291,477,265
+2004,Before Sunset,> 250,263,240,266
+1959,Ben-Hur,195,481,227,267
+1961,Judgment at Nuremberg,134,752,375,268
+2013,The Hunger Games: Catching Fire,> 250,83,525,269
+2004,The Incredibles,> 250,222,208,270
+2000,Remember the Titans,> 250,312,346,271
+2001,Shrek,> 250,143,323,272
+1934,It Happened One Night,184,366,424,273
+2001,Harry Potter and the Sorcerer’s Stone,> 250,88,530,274
+2006,Casino Royale,> 250,282,200,275
+2014,Edge of Tomorrow,> 250,293,203,276
+2014,How to Train Your Dragon 2,> 250,186,395,277
+1941,The Maltese Falcon,216,541,271,278
+2014,Birdman or (The Unexpected Virtue of Ignorance),> 250,299,168,279
+1974,Young Frankenstein,> 250,443,334,280
+1957,Wild Strawberries,152,609,329,281
+2001,Ocean’s Eleven,> 250,221,262,282
+2004,Shaun of the Dead,> 250,233,261,283
+1967,The Graduate,> 250,285,254,284
+2006,The Fall,> 250,223,594,285
+1995,La Haine,231,561,276,286
+2006,Little Miss Sunshine,> 250,149,349,287
+2003,Dogville,> 250,328,365,288
+2015,The Hateful Eight,> 250,411,171,289
+2005,Pride & Prejudice,> 250,68,754,290
+2014,Nightcrawler,> 250,380,173,291
+1990,Dances With Wolves,> 250,375,264,292
+1986,Castle in the Sky,250,379,310,293
+2010,Tangled,> 250,93,599,294
+1999,The Iron Giant,> 250,418,312,295
+2000,In the Mood for Love,240,358,423,296
+2016,Hidden Figures,> 250,180,651,297
+2008,Yip Man,> 250,744,214,298
+1951,Strangers on a Train,> 250,478,371,299
+1948,Rope,> 250,503,369,300
+2009,Moon,> 250,350,284,301
+2016,Manchester by the Sea,> 250,427,243,302
+1951,A Streetcar Named Desire,> 250,348,448,303
+1986,Ferris Bueller’s Day Off,> 250,255,303,304
+2001,Mulholland Drive,> 250,349,242,305
+2014,Captain America: The Winter Soldier,> 250,204,316,306
+2009,District 9,> 250,324,193,307
+1982,Blade Runner,149,341,197,308
+1999,Magnolia,> 250,444,194,309
+1985,Brazil,> 250,554,287,310
+2002,The Bourne Identity,> 250,298,256,311
+2002,Hero,> 250,492,355,312
+2005,Cinderella Man,> 250,495,286,313
+2000,"Crouching Tiger, Hidden Dragon",> 250,354,313,314
+1999,Toy Story 2,> 250,249,266,315
+2013,Star Trek: Into Darkness,> 250,191,417,316
+1968,Rosemary’s Baby,> 250,343,304,317
+1946,Notorious,> 250,500,450,318
+1976,Network,191,720,273,319
+2016,Rogue One,> 250,283,337,320
+1997,Children of Heaven,128,678,519,321
+2007,Hot Fuzz,> 250,259,331,322
+1983,A Christmas Story,> 250,415,377,323
+2004,Crash,> 250,226,336,324
+2010,Harry Potter and the Deathly Hallows: Part 1,> 250,104,696,325
+1995,Dilwale Dulhania Le Jayenge,> 250,902,437,326
+2013,Captain Phillips,> 250,270,340,327
+2005,Walk the Line,> 250,224,418,328
+2017,Guardians of the Galaxy Vol. 2,> 250,241,446,329
+2007,Elite Squad,> 250,974,307,330
+1982,E.T. the Extra-Terrestrial,> 250,246,370,331
+2000,Dancer in the Dark,> 250,400,447,332
+1966,Persona,196,548,400,333
+2009,The Girl With the Dragon Tattoo,> 250,269,412,334
+2008,Let the Right One In,> 250,384,270,335
+2014,Boyhood,> 250,335,238,336
+2012,Barfi!,> 250,877,440,337
+2009,Mr. Nobody,> 250,253,434,338
+1993,True Romance,> 250,557,280,339
+2010,My Name Is Khan,> 250,535,517,340
+2009,The Hangover,> 250,258,247,341
+1926,The General,153,891,381,342
+2012,Moonrise Kingdom,> 250,232,386,343
+2012,Les Miserables,> 250,168,499,344
+1979,Stalker,197,767,347,345
+2017,Baby Driver,> 250,389,305,346
+2012,Silver Linings Playbook,> 250,237,251,347
+2016,Contratiempo,> 250,589,561,348
+2004,The Sea Inside,> 250,428,507,349
+2006,Apocalypto,> 250,364,373,350
+1959,The 400 Blows,200,637,374,351
+2017,Get Out,> 250,344,314,352
+1988,Akira,> 250,882,267,353
+1964,Fistful of Dollars,> 250,950,278,354
+2009,The Blind Side,> 250,198,488,355
+2008,Taken,> 250,257,315,356
+2008,The Curious Case of Benjamin Button,> 250,211,320,357
+2007,The Diving Bell and the Butterfly,> 250,432,397,358
+2011,Drive,> 250,361,207,359
+2003,"Spring, Summer, Fall, Winter… and Spring",> 250,572,416,360
+1987,The Untouchables,> 250,604,300,361
+1944,Arsenic and Old Lace,> 250,464,617,362
+1996,Sling Blade,> 250,715,464,363
+2008,The Boy in the Striped Pajamas,> 250,207,601,364
+2002,Talk to Her,> 250,394,430,365
+1979,Manhattan,> 250,508,359,366
+2013,Short Term 12,> 250,474,529,367
+2015,Straight Outta Compton,> 250,513,459,368
+2010,Despicable Me,> 250,145,543,369
+2000,Almost Famous,> 250,320,322,370
+1982,Pink Floyd: The Wall,> 250,656,510,371
+2006,Children of Men,> 250,355,263,372
+2014,Ex Machina,> 250,362,272,373
+1997,Boogie Nights,> 250,660,213,374
+2013,Queen,> 250,1005,484,375
+1973,Papillon,> 250,831,354,376
+2010,Elite Squad: The Enemy Within,> 250,1116,352,377
+2014,The Theory of Everything,> 250,173,591,378
+1940,The Philadelphia Story,> 250,393,766,379
+1940,The Grapes of Wrath,221,728,403,380
+1971,Harold and Maude,> 250,436,685,381
+2016,Captain Fantastic,> 250,363,505,382
+1993,What’s Eating Gilbert Grape,> 250,202,574,383
+2003,Memories of Murder,199,916,330,384
+2009,Avatar,> 250,228,296,385
+2002,Infernal Affairs,243,875,292,386
+1994,Three Colors: Red,> 250,644,415,387
+1976,All the President’s Men,> 250,755,420,388
+2016,The Handmaiden,246,595,549,389
+1955,The Night of the Hunter,> 250,737,471,390
+1995,Underground,> 250,751,541,391
+1990,The Godfather: Part III,> 250,440,358,392
+1984,"Paris, Texas",244,736,455,393
+2010,The Fighter,> 250,452,283,394
+1966,Who’s Afraid of Virginia Woolf?,> 250,537,565,395
+2014,The Fault in Our Stars,> 250,187,513,396
+2005,Brokeback Mountain,> 250,162,611,397
+2007,Chak de! India,> 250,1278,317,398
+2006,Lucky Number Slevin,> 250,416,363,399
+1991,JFK,> 250,847,324,400
+1998,The Legend of 1900,242,608,607,401
+2017,The Greatest Showman,> 250,272,972,402
+2000,"O Brother, Where Art Thou?",> 250,401,387,403
+2010,The Social Network,> 250,414,201,404
+1997,Gattaca,> 250,356,390,405
+2012,Argo,> 250,243,409,406
+1993,Groundhog Day,230,457,210,407
+1962,The Manchurian Candidate,> 250,849,506,408
+1984,This Is Spinal Tap,> 250,762,348,409
+2013,Frozen,> 250,130,692,410
+1990,Misery,> 250,402,466,411
+2007,The Man From Earth,> 250,764,290,412
+1968,Planet of the Apes,> 250,789,294,413
+2000,Cast Away,> 250,314,328,414
+1998,"Black Cat, White Cat",> 250,676,605,415
+1971,Willy Wonka & the Chocolate Factory,> 250,333,496,416
+1985,Ran,133,1207,234,417
+2008,Changeling,> 250,296,405,418
+2006,Rang De Basanti,180,1218,236,419
+1989,Glory,> 250,768,427,420
+1989,Back to the Future Part II,> 250,374,338,421
+2004,The Bourne Supremacy,> 250,413,333,422
+2006,Letters From Iwo Jima,> 250,791,364,423
+1952,High Noon,> 250,890,407,424
+1997,The Fifth Element,> 250,247,546,425
+2017,Wonder Woman,> 250,196,706,426
+1995,Ghost in the Shell,> 250,917,361,427
+1961,Yojimbo,113,1281,235,428
+2015,Bahubali: The Beginning,> 250,1491,393,429
+2007,Zodiac,> 250,435,275,430
+1990,Awakenings,> 250,467,559,431
+1993,Three Colors: Blue,> 250,552,603,432
+1950,Harvey,> 250,645,680,433
+2014,Fury,> 250,449,341,434
+1993,Philadelphia,> 250,277,644,435
+1998,The Celebration,> 250,785,404,436
+1946,The Big Sleep,> 250,750,489,437
+1987,Wings of Desire,> 250,622,638,438
+2016,Hunt for the Wilderpeople,> 250,605,701,439
+1994,Chungking Express,> 250,712,600,440
+2012,Kahaani,> 250,1212,478,441
+1958,Touch of Evil,228,1008,356,442
+2004,Finding Neverland,> 250,240,570,443
+2004,The Machinist,> 250,330,438,444
+1987,Empire of the Sun,> 250,530,668,445
+2012,Wreck-It Ralph,> 250,281,458,446
+1968,Night of the Living Dead,> 250,837,385,447
+1993,Carlito’s Way,> 250,876,326,448
+1996,The Bandit,171,1181,362,449
+1997,The Game,> 250,441,367,450
+1946,The Best Years of Our Lives,239,772,604,451
+2004,Man on Fire,> 250,406,444,452
+2014,The Lego Movie,> 250,397,380,453
+1964,Mary Poppins,> 250,234,806,454
+1959,Anatomy of a Murder,> 250,864,515,455
+1999,Being John Malkovich,> 250,392,383,456
+2015,The Big Short,> 250,515,299,457
+2008,The Wrestler,> 250,621,289,458
+1954,La Strada,> 250,748,623,459
+1999,All About My Mother,> 250,405,712,460
+2007,3:10 to Yuma,> 250,511,456,461
+1975,Barry Lyndon,225,991,281,462
+2009,Fantastic Mr. Fox,> 250,423,445,463
+1922,Nosferatu,> 250,716,468,464
+2017,Wonder,> 250,577,862,465
+2006,The Last King of Scotland,> 250,455,535,466
+1980,The Blues Brothers,> 250,687,372,467
+2012,Skyfall,> 250,295,401,468
+1997,As Good as It Gets,> 250,367,396,469
+1955,Diabolique,223,910,534,470
+2016,Kubo and the Two Strings,> 250,600,616,471
+1972,Solaris,> 250,996,429,472
+2013,Before Midnight,> 250,453,449,473
+1989,Kiki’s Delivery Service,> 250,357,674,474
+1994,Ed Wood,> 250,545,384,475
+1960,La Dolce Vita,> 250,793,512,476
+1993,The Fugitive,> 250,569,392,477
+1967,Bonnie and Clyde,> 250,648,501,478
+1996,Primal Fear,> 250,426,578,479
+2002,Harry Potter and the Chamber of Secrets,> 250,142,831,480
+1999,The Insider,> 250,863,378,481
+2004,3-Iron,> 250,651,719,482
+1965,Doctor Zhivago,> 250,714,577,483
+1927,Sunrise,164,995,633,484
+2009,Zombieland,> 250,329,414,485
+2001,Lagaan: Once Upon a Time in India,249,1190,293,486
+1993,Tombstone,> 250,794,526,487
+2008,Departures,> 250,731,613,488
+2009,(500) Days of Summer,> 250,310,345,489
+1969,Midnight Cowboy,> 250,818,502,490
+1961,Breakfast at Tiffany’s,> 250,210,802,491
+2007,Harry Potter and the Order of the Phoenix,> 250,147,837,492
+2004,The Butterfly Effect,> 250,303,428,493
+2003,21 Grams,> 250,410,500,494
+2016,Doctor Strange,> 250,287,556,495
+2009,Harry Potter and the Half-Blood Prince,> 250,160,846,496
+1953,Stalag 17,> 250,1059,642,497
+1962,What Ever Happened to Baby Jane?,> 250,585,793,498
+2007,Once,> 250,463,487,499
+2013,Mandariinid,> 250,666,865,500
