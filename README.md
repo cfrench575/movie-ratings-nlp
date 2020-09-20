@@ -37,6 +37,8 @@ from yellowbrick.text import FreqDistVisualizer
 from yellowbrick.datasets import load_hobbies
 from nltk.corpus import stopwords 
 stop_words = set(stopwords.words('english')) 
+from keras.models import Sequential
+from keras.layers import Dense
 ```
 
 ### load and combine data
@@ -186,9 +188,9 @@ y_pred = classifier.predict(X_test)
 y_pred_prob = classifier.predict_proba(X_test)[:,1]
 
 ```
-
-### model evaluation
+##### random forest model evaluation
 ```python
+######### model evaluation ###########
 # Fitting classifier to the Training set
 # Compute and print the confusion matrix and classification report
 cm=pd.DataFrame(
@@ -222,7 +224,83 @@ print(cv_auc)
 ## write predictions to dataframe for later analysis
 data['predictions']=classifier.predict_proba(X) [:,1]
 ```
+### Neural Network
+##### Exploring parameter options
+```python
 
+target = to_categorical(y_train)
+
+### parameter tuning - activation functions and learning rates
+activation_functions=['relu', 'sigmoid', 'softmax', 'softplus', 'softsign', 'tanh', 'selu', 'elu', 'exponential']
+optimizers=['sgd', 'adam', 'rmsprop']
+accuracies=[]
+acts=[]
+optims=[]
+
+for actfunc in activation_functions: 
+    for opt in optimizers: 
+        model = Sequential()
+        model.add(Dense(12, input_dim=2600, activation=actfunc))
+        model.add(Dense(8, activation=actfunc))
+        model.add(Dense(2, activation='softmax'))
+        model.compile(loss='categorical_crossentropy', optimizer=opt, metrics=['accuracy'])
+        hist=model.fit(X_train, target, epochs=25, batch_size=10, validation_split = 0.2)
+        accuracy=max(hist.history['val_accuracy'])
+        accuracies.append(accuracy)
+        acts.append(actfunc)
+        optims.append(opt)
+        nods.append(node)
+
+print(model_stats=list(zip(acts, optims, accuracies)))
+
+### parameter tuning: nodes and epochs
+
+nodes=[10, 20, 50, 100, 200]
+batches=[10, 20, 30, 40, 50]
+accuracies=[]
+ns=[]
+bs=[]
+
+for node in nodes: 
+    for batch in batches:
+        model = Sequential()
+        model.add(Dense(node, input_dim=2600, activation='exponential'))
+        model.add(Dense(node, activation='exponential'))
+        model.add(Dense(2, activation='softmax'))
+        model.compile(loss='categorical_crossentropy', optimizer='sgd', metrics=['accuracy'])
+        hist=model.fit(X_train, target, epochs=25, batch_size=batch, validation_split = 0.2)
+        accuracy=max(hist.history['val_accuracy'])
+        accuracies.append(accuracy)
+        ns.append(node)
+        bs.append(batch)
+
+print(model_stats=list(zip(ns, bs, accuracies)))
+
+```
+##### Final model
+```python
+model = Sequential()
+model.add(Dense(20, input_dim=2600, activation='exponential'))
+model.add(Dense(10, activation='exponential'))
+model.add(Dense(2, activation='softmax'))
+model.compile(loss='categorical_crossentropy', optimizer='sgd', metrics=['accuracy'])
+model.fit(X_train, target, epochs=10, batch_size=10, validation_split = 0.2)
+```
+##### Final model evaluation: additional validation set
+```python
+y_pred = model.predict_classes(X_test)
+
+cm=pd.DataFrame(
+    confusion_matrix(y_test, y_pred),
+    columns=['Predicted men', 'Predicted women'],
+    index=['men', 'women']
+)
+print(cm)
+print(classification_report(y_test, y_pred))
+
+acc_test = accuracy_score(y_test, y_pred)
+print('Test set accuracy of bc: {:.2f}'.format(acc_test)) 
+```
 ### visualizations of common keywords for men and women
 ```python
 women_df = data[data["gender_class"]==1]
