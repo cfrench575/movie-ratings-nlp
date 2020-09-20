@@ -40,8 +40,8 @@ stop_words = set(stopwords.words('english'))
 from keras.models import Sequential
 from keras.layers import Dense
 ```
-
-### load and combine data
+### Data cleaning
+##### load and combine data
 ```python
 gender = pd.read_csv("gender_ratings.csv")
 gender=gender.replace("’", "'", regex=True)
@@ -50,7 +50,7 @@ movie_ids=join_table[['id', 'title', 'revenue', 'release_date']]
 keywords = pd.read_csv("keywords.csv")
 ```
 
-### reformat keyword data
+##### reformat keyword data
 ```python
 ##convert list of dictionaries in columns to an array of keywords
 column_of_lists=[]
@@ -70,7 +70,7 @@ keywords['word_array']=column_of_lists
 keywords['id']=keywords['id'].astype(str)
 ```
 
-### some leftover string cleaning to make two datasets compatible 
+##### some leftover string cleaning to make two datasets compatible 
 ```python
 MovieDict = {
 "Goodfellas":"GoodFellas"
@@ -108,7 +108,7 @@ def year_title_recode(row):
         return '2014'
 ```
 
-### merge dataframes
+##### merge dataframes
 ```python
 gender['title']=gender['title'].map(MovieDict).fillna(gender['title'])
 df = pd.merge(keywords, movie_ids, on='id', how='left')
@@ -178,6 +178,7 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.30, rand
 ```
 
 ### Random Forest model
+##### model creation
 ```python
 # Fitting classifier to the Training set
 from sklearn.ensemble import RandomForestClassifier
