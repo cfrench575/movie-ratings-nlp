@@ -37,8 +37,11 @@ from yellowbrick.text import FreqDistVisualizer
 from yellowbrick.datasets import load_hobbies
 from nltk.corpus import stopwords 
 stop_words = set(stopwords.words('english')) 
-from keras.models import Sequential
 from keras.layers import Dense
+from keras.models import Sequential
+from keras.utils import to_categorical
+import plotly.express as px
+from collections import defaultdict
 ```
 ### Data cleaning
 ##### load and combine data
@@ -122,13 +125,14 @@ gender['year'] = gender['title'].apply(year_title_recode).fillna(gender['year'])
 
 data = pd.merge(df, gender, on=['title','year'], how='outer')
 
+### clean strings
 data['word_array']=data['word_array'].astype(str)
 data=data.replace("\\[", "", regex=True)
 data=data.replace("\\]", "", regex=True)
 data=data.replace("\\'", "", regex=True)
-
+data=data.replace(">", "", regex=True)
+data['Actual']=data['Actual'].astype(float)
 data.dropna(subset=['Actual'], how='all', inplace=True)
-
 data.reset_index(inplace=True)
 ```
 
@@ -151,9 +155,8 @@ print(corr)
 ```python
 
 nltk.download('stopwords')
-### can change this to test different strategies - this is phrases, not just words
-word_array_cleaned = []
 
+word_array_cleaned = []
 ###words only no phrases
 for i in range(0, len(data)):
     review = re.sub('[^a-zA-Z]', ' ', data.loc[i,'word_array'])
@@ -303,20 +306,73 @@ acc_test = accuracy_score(y_test, y_pred)
 print('Test set accuracy of bc: {:.2f}'.format(acc_test)) 
 ```
 ### visualizations of common keywords for men and women
+##### clean keywords as phrases instead of single words for better interpretability 
+##### create keyword frequency tables for women-preferred versus men-preferred movies based on gender separated rankings
 ```python
-women_df = data[data["gender_class"]==1]
-vectorizer = CountVectorizer()
-docs = vectorizer.fit_transform(women_df['word_array_cleaned'])
-features = vectorizer.get_feature_names()
-visualizer = FreqDistVisualizer(features=features)
-visualizer.fit(docs)
-visualizer.poof()
+word_array_disp = []
+for i in range(0, len(data)):
+    review = re.sub('[^a-zA-Z,]', '', data.loc[i,'word_array'])
+    review = review.lower()
+    review = review.split(",")
+    ps = PorterStemmer()
+    review = [ps.stem(word) for word in review if not word in set(stopwords.words('english'))]
+    review = ' '.join(review)
+    word_array_disp.append(review)
+    
+data['word_array_disp']=word_array_disp
 
 men_df = data[data["gender_class"] ==0]
-vectorizer = CountVectorizer()
-docs = vectorizer.fit_transform(men_df['word_array_cleaned'])
-features = vectorizer.get_feature_names()
-visualizer = FreqDistVisualizer(features=features)
-visualizer.fit(docs)
-visualizer.poof()
+women_df = data[data["gender_class"] ==1]
+
+word_freq_men = defaultdict(int)
+for text in men_df['word_array_disp']:
+    for word in text.split():
+        word_freq_men[word] += 1
+
+word_freq_women = defaultdict(int)
+for text in women_df['word_array_disp']:
+    for word in text.split():
+        word_freq_women[word] += 1
+
+word_freq = defaultdict(int)
+for text in data['word_array_disp']:
+    for word in text.split():
+        word_freq[word] += 1
+
+word_men=pd.DataFrame.from_dict(word_freq_men, orient='index') \
+    .sort_values(0, ascending=False) \
+    .rename(columns={0: 'abs_freq_men'})
+
+word_women=pd.DataFrame.from_dict(word_freq_women, orient='index') \
+    .sort_values(0, ascending=False) \
+    .rename(columns={0: 'abs_freq_women'})
+
+word_total=pd.DataFrame.from_dict(word_freq, orient='index') \
+    .sort_values(0, ascending=False) \
+    .rename(columns={0: 'abs_freq_total'})
+    
+word_freq_array=pd.concat([word_men, word_women, word_total], axis=1)
+word_freq_array["perc_men"] = (word_freq_array["abs_freq_men"]/word_freq_array["abs_freq_total"]) *100
+word_freq_array["perc_women"] = (word_freq_array["abs_freq_women"]/word_freq_array["abs_freq_total"])*100
+word_freq_array["rel_diff"] = (word_freq_array["perc_men"]-word_freq_array["perc_women"])
 ```
+##### frequency of keywords for movies that men rated more highly than women. The frequency of the same keywords for movies that women rated more highly than men are included for comparison
+```python
+table_df_men=word_freq_array[['abs_freq_men', 'abs_freq_women']].dropna(subset=['abs_freq_men']).sort_values(by=['abs_freq_men']).tail(10)
+
+import matplotlib.pyplot as plt
+table_men = table_df_men.plot.barh(rot=0, stacked=True)
+plt.show()
+
+```
+![alt text](https://github.com/cfrench575/movie-ratings-nlp/blob/master/images/men_freq.png)
+
+##### frequency of keywords for movies that women rated more highly than men. The frequency of the same keywords for movies that men rated more highly than women are included for comparison
+```python
+
+table_df_women=word_freq_array[['abs_freq_women', 'abs_freq_men']].dropna(subset=['abs_freq_women']).sort_values(by=['abs_freq_women']).tail(10)
+
+table_women = table_df_women.plot.barh(rot=0, stacked=True)
+plt.show()
+```
+![alt text](https://github.com/cfrench575/movie-ratings-nlp/blob/master/images/women_freq.png)
