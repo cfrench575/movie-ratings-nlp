@@ -6,7 +6,16 @@ This project analyzes gender, keywords, revenue and ratings for movies from mult
 
 IMDB revenue and key-word plot synopsis data sourced from here: https://www.kaggle.com/rounakbanik/the-movies-dataset?select=movies_metadata
 
-### import libraries
+# Table of Contents
+1. [Data Preparation](#data-preparation)
+2. [Random Forest Model](#random-forest-model)
+3. [Neural Network](#neural-network)
+4. [Keyword Visualizations](#keyword-visualizations)
+5. [Additional Analyses](#additional-analyses)
+6. [Conclusion](#conclusion)
+
+# Data Preparation
+#### import libraries
 ```python
 import json
 import kaggle
@@ -135,7 +144,6 @@ data['Actual']=data['Actual'].astype(float)
 data.dropna(subset=['Actual'], how='all', inplace=True)
 data.reset_index(inplace=True)
 ```
-
 ### descriptive statistics
 ```python
 data['gender_class'] = np.where((data['womenonly'] > data['menonly']), 1, 0) 
@@ -143,15 +151,11 @@ data['gender_class_factor'] = np.where(data['gender_class']==1, 'women', 'men')
 data[["gender_class_factor"]].describe()
 
 data[["gender_class_factor", "revenue"]].groupby("gender_class_factor").mean()
-
-## correlation between rating and revenue for men vs women 
-
-dfr = data[["gender_class_factor", 'menonly', 'womenonly', 'revenue']]
-corr = dfr.corr()
-print(corr)
 ```
+![alt text](https://github.com/cfrench575/movie-ratings-nlp/blob/master/images/descriptives.png)
 
-### prep for supervised learning model
+
+##### prep for supervised learning model
 ```python
 
 nltk.download('stopwords')
@@ -179,8 +183,7 @@ from sklearn.model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.30, random_state = 0)
 
 ```
-
-### Random Forest model
+# Random Forest Model
 ##### model creation
 ```python
 # Fitting classifier to the Training set
@@ -228,7 +231,10 @@ print(cv_auc)
 ## write predictions to dataframe for later analysis
 data['predictions']=classifier.predict_proba(X) [:,1]
 ```
-### Neural Network
+![alt text](https://github.com/cfrench575/movie-ratings-nlp/blob/master/images/randomforest_CM.png)
+
+
+# Neural Network
 ##### Exploring parameter options
 ```python
 
@@ -281,7 +287,7 @@ for node in nodes:
 print(model_stats=list(zip(ns, bs, accuracies)))
 
 ```
-##### Final model
+##### final model
 ```python
 model = Sequential()
 model.add(Dense(20, input_dim=2600, activation='exponential'))
@@ -290,7 +296,7 @@ model.add(Dense(2, activation='softmax'))
 model.compile(loss='categorical_crossentropy', optimizer='sgd', metrics=['accuracy'])
 model.fit(X_train, target, epochs=10, batch_size=10, validation_split = 0.2)
 ```
-##### Final model evaluation: additional validation set
+##### final model evaluation: additional validation set
 ```python
 y_pred = model.predict_classes(X_test)
 
@@ -305,9 +311,12 @@ print(classification_report(y_test, y_pred))
 acc_test = accuracy_score(y_test, y_pred)
 print('Test set accuracy of bc: {:.2f}'.format(acc_test)) 
 ```
+![alt text](https://github.com/cfrench575/movie-ratings-nlp/blob/master/images/neuralnet_validation.png)
+
+
+# Keyword Visualizations
 ### visualizations of common keywords for men and women
 ##### clean keywords as phrases instead of single words for better interpretability 
-##### create keyword frequency tables for women-preferred versus men-preferred movies based on gender separated rankings
 ```python
 word_array_disp = []
 for i in range(0, len(data)):
@@ -320,7 +329,9 @@ for i in range(0, len(data)):
     word_array_disp.append(review)
     
 data['word_array_disp']=word_array_disp
-
+````
+##### create keyword frequency tables for women-preferred versus men-preferred movies based on gender separated rankings
+````python
 men_df = data[data["gender_class"] ==0]
 women_df = data[data["gender_class"] ==1]
 
@@ -355,7 +366,7 @@ word_freq_array=pd.concat([word_men, word_women, word_total], axis=1)
 word_freq_array["perc_men"] = (word_freq_array["abs_freq_men"]/word_freq_array["abs_freq_total"]) *100
 word_freq_array["perc_women"] = (word_freq_array["abs_freq_women"]/word_freq_array["abs_freq_total"])*100
 word_freq_array["rel_diff"] = (word_freq_array["perc_men"]-word_freq_array["perc_women"])
-```
+````
 ##### frequency of keywords for movies that men rated more highly than women. The frequency of the same keywords for movies that women rated more highly than men are included for comparison
 ```python
 table_df_men=word_freq_array[['abs_freq_men', 'abs_freq_women']].dropna(subset=['abs_freq_men']).sort_values(by=['abs_freq_men']).tail(10)
@@ -376,3 +387,14 @@ table_women = table_df_women.plot.barh(rot=0, stacked=True)
 plt.show()
 ```
 ![alt text](https://github.com/cfrench575/movie-ratings-nlp/blob/master/images/women_freq.png)
+
+# Additional Analyses
+#### correlation between rating and revenue for men vs women 
+```python
+dfr = data[["gender_class_factor", 'menonly', 'womenonly', 'revenue']]
+corr = dfr.corr()
+print(corr)
+````
+![alt text](https://github.com/cfrench575/movie-ratings-nlp/blob/master/images/corr_matrix.png)
+
+# Conclusion
