@@ -145,6 +145,7 @@ data.dropna(subset=['Actual'], how='all', inplace=True)
 data.reset_index(inplace=True)
 ```
 ### descriptive statistics
+##### gender_class variable is coded such that '1' refers to movies that women ranked higher than men and '0' refers to movies that men ranked higher than women
 ```python
 data['gender_class'] = np.where((data['womenonly'] > data['menonly']), 1, 0) 
 data['gender_class_factor'] = np.where(data['gender_class']==1, 'women', 'men') 
@@ -235,9 +236,8 @@ data['predictions']=classifier.predict_proba(X) [:,1]
 
 
 # Neural Network
-##### Exploring parameter options
+##### exploring parameter options
 ```python
-
 target = to_categorical(y_train)
 
 ### parameter tuning - activation functions and learning rates
@@ -313,7 +313,6 @@ print('Test set accuracy of bc: {:.2f}'.format(acc_test))
 ```
 ![alt text](https://github.com/cfrench575/movie-ratings-nlp/blob/master/images/neuralnet_validation.png)
 
-
 # Keyword Visualizations
 ### visualizations of common keywords for men and women
 ##### clean keywords as phrases instead of single words for better interpretability 
@@ -388,6 +387,25 @@ plt.show()
 ```
 ![alt text](https://github.com/cfrench575/movie-ratings-nlp/blob/master/images/women_freq.png)
 
+### visualizations of most gender-differentiating keywords
+##### best gender-differentiating keywords for men - keywords with the greatest difference in frequency between movies that men rated more highly than women
+```python
+table_df_mendiff=word_freq_array[['perc_men', 'perc_women', 'rel_diff' ]].dropna(subset=['rel_diff']).sort_values(by=['rel_diff']).tail(10)
+
+table_mendiff = table_df_mendiff[['perc_men', 'perc_women' ]].plot.barh(rot=0, stacked=True)
+plt.show()
+```
+![alt text](https://github.com/cfrench575/movie-ratings-nlp/blob/master/images/men_difference.png)
+
+##### best gender-differentiating keywords for women - keywords with the greatest difference in frequency between movies that women rated more highly than men
+```python
+table_df_womendiff=word_freq_array[['perc_men', 'perc_women', 'rel_diff' ]].dropna(subset=['rel_diff']).sort_values(by=['rel_diff'], ascending= False).tail(10)
+
+table_womendiff = table_df_womendiff[['perc_women','perc_men' ]].plot.barh(rot=0, stacked=True)
+plt.show()
+```
+![alt text](https://github.com/cfrench575/movie-ratings-nlp/blob/master/images/women_difference.png)
+
 # Additional Analyses
 #### correlation between rating and revenue for men vs women 
 ```python
@@ -396,5 +414,31 @@ corr = dfr.corr()
 print(corr)
 ````
 ![alt text](https://github.com/cfrench575/movie-ratings-nlp/blob/master/images/corr_matrix.png)
+
+#### weighted frequency of keywords by revenue
+```python
+def word_frequency(text_list, num_list, sep=None):
+    word_freq = defaultdict(lambda: [0, 0])
+    for text, num in zip(text_list, num_list):
+        for word in text.split(sep=sep): 
+            word_freq[word][0] += 1 
+            word_freq[word][1] += num
+    columns = {0: 'abs_freq', 1: 'wtd_freq'}
+    abs_wtd_df = (pd.DataFrame.from_dict(word_freq, orient='index')
+                 .rename(columns=columns )
+                 .sort_values('wtd_freq', ascending=False)
+                 .assign(rel_value=lambda df: df['wtd_freq'] / df['abs_freq']).round())
+    abs_wtd_df.insert(1, 'abs_perc', value=abs_wtd_df['abs_freq'] / abs_wtd_df['abs_freq'].sum())
+    abs_wtd_df.insert(2, 'abs_perc_cum', abs_wtd_df['abs_perc'].cumsum())
+    abs_wtd_df.insert(4, 'wtd_freq_perc', abs_wtd_df['wtd_freq'] / abs_wtd_df['wtd_freq'].sum())
+    abs_wtd_df.insert(5, 'wtd_freq_perc_cum', abs_wtd_df['wtd_freq_perc'].cumsum())
+    return abs_wtd_df
+    
+weighted_rev_frequency= weighted_rev_frequency[['wtd_freq']].sort_values(by=['wtd_freq']).tail(10)
+
+table_weighted_rev_frequency = weighted_rev_frequency.plot.barh(rot=0)
+plt.show()
+````
+![alt text](https://github.com/cfrench575/movie-ratings-nlp/blob/master/images/revenue_weighted_freq.png)
 
 # Conclusion
