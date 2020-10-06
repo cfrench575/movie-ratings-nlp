@@ -442,3 +442,13 @@ plt.show()
 ![alt text](https://github.com/cfrench575/movie-ratings-nlp/blob/master/images/revenue_weighted_freq.png)
 
 # Conclusion
+
+* out of 500 movies with ratings separated by gender, women ranked the same movie higher than the men in the sample 294 times. In other words there were 294 movies that were ranked higher for women only compared to men only
+
+* Movies that women ranked more favorably than men made less revenue than movies that men ranked more favorably than women (339.787 million on average for men compared to 1.111 million on average for women)
+
+* Movie rank was not correlated with revenue for men (r= .09), but revenue was negatively correlated with rank for women (r=-.39). For women, a more favorable (lower number) ranking for a movie was associated with more revenue.
+
+* Both a random forest model and a neural net were able to use plot keywords to classify whether or not a movies was ranked more favorably by men compared to women with some degree of accuracy. Cross-validation scores for each model yielded a wide range of accuracies (60%-80%) though the models performed better than chance. Both models were able to classify which movies would be ranked for favorably for women than for men (around 90%), but were less accurate when classifying which movies would be ranked more favorably by men compared to women (around 40%).
+
+* Most frequent keywords associated with a men-preferred movie are: 
