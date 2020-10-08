@@ -153,7 +153,12 @@ data[["gender_class_factor"]].describe()
 
 data[["gender_class_factor", "revenue"]].groupby("gender_class_factor").mean()
 ```
-![alt text](https://github.com/cfrench575/movie-ratings-nlp/blob/master/images/descriptives.png)
+
+gender        | count   |Avg. revenue  |
+------------- | --------|--------------|
+men           | 207     | $339,787,900 |
+women         | 294     | $111,100,700 |
+
 
 
 ##### prep for supervised learning model
@@ -449,6 +454,53 @@ plt.show()
 
 * Movie rank was not correlated with revenue for men (r= .09), but revenue was negatively correlated with rank for women (r=-.39). For women, a more favorable (lower number) ranking for a movie was associated with more revenue.
 
+
+corr matrix| menonly   |  womenonly |  revenue |
+-----------|-----------|------------|----------|
+menonly    | 1.000000  |  0.438230  |-0.094386 |
+womenonly  | 0.438230  |  1.000000  |-0.394175 |
+revenue    | -0.094386 |  -0.394175 | 1.000000 |
+
+
 * Both a random forest model and a neural net were able to use plot keywords to classify whether or not a movies was ranked more favorably by men compared to women with some degree of accuracy. Cross-validation scores for each model yielded a wide range of accuracies (60%-80%) though the models performed better than chance. Both models were able to classify which movies would be ranked for favorably for women than for men (around 90%), but were less accurate when classifying which movies would be ranked more favorably by men compared to women (around 40%).
 
-* Most frequent keywords associated with a men-preferred movie are: 
+* Most frequent keywords associated with **men-preferred** movies are: 
+
+keyword            | frequency |  
+------------------ | ----------|
+basedonnovel       | 25        |
+duringcreditssting | 24        |
+aftercreditssting  | 21        |
+magic              | 16        |
+anim               | 14        |
+
+* Most gender-differentiated keywords associated with **men-preferred** movies are: 
+
+keyword                  | % men-preferred movies |  
+-------------------------| -----------------------|
+aftercreditssting        | 95.5%                  |
+marvelcom                | 91.7%                  |
+magic                    | 88.9%                  |
+wifehusbandrelationship  | 85.7%                  |
+neighbor                 | 85.7%                  |
+
+
+* Most frequent keywords associated with **women-preferred** movies are: 
+
+keyword        | frequency |  
+---------------|-----------|
+murder         | 21        |
+dystopia       | 20        |
+dyinganddeath  | 17        |
+violence       | 14        |
+basedonnovel   | 13        |
+
+* Most gender-differentiated keywords associated with **women-preferred** movies are: 
+
+keyword         | % women-preferred movies |  
+----------------| -------------------------|
+filmnoir        | 91.7%                    |
+assassin        | 90.9%                    |
+crime           | 87.5%                    |
+detect          | 87.5%                    |
+theft           | 85.7%                    |
