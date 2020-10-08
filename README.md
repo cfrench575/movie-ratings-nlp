@@ -472,7 +472,7 @@ basedonnovel       | 25        |
 duringcreditssting | 24        |
 aftercreditssting  | 21        |
 magic              | 16        |
-anim               | 14        |
+animal             | 14        |
 
 * Most gender-differentiated keywords associated with **men-preferred** movies are: 
 
